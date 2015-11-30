@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="HelloApp">
+<head>
+	<meta charset="UTF-8">
+	<title>lala</title>
+</head>
+<body>
+	<script src="/bower_components/angular/angular.js"></script>
+	<div ng-controller="HelloCtrl">
+		<h1 ng-bind="list.user">{{list.user}}</h1>
+		 <input type="text" ng-model="text">
+		 <button ng-click="handler()">go</button>
+		 <hr>
+		 <table>
+		 	<thead>
+			 	<tr>
+			 		<td>name</td><td>yepno</td>
+			 	</tr>
+		 	</thead>
+		 	<tbody>
+			 	<tr ng-repeat="course in list.courses">
+			 		<td>{{course.name}}</td>
+			 		<td ng-click="course.pass = !course.pass">{{course.pass ? 'yes' : 'no'}}</td>
+			 	</tr>
+		 	</tbody>
+		 </table>
+	</div>
+	<script src="/js/script.js"></script>
+</body>
+</html>
