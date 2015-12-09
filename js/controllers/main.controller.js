@@ -14,19 +14,12 @@
 		// })
 
 		.controller('appCtrl', function appCtrl($scope, MyFactory) {
-			var treeData = MyFactory.getLinkedList();
-			treeData = {
+			var treeData = {
 				label: 'root',
-				childrens: treeData
+				childrens: MyFactory.getLinkedList()
 			};
-			$scope.bTreeDataSet = true; // initially load tree
+
 			$scope.treeData = treeData;
-			$scope.btnText = function() {
-				return $scope.bTreeDataSet ? "Remove All" : "Set Treedata back";
-			}
-			$scope.toggleData = function() {
-				$scope.treeData = ($scope.bTreeDataSet = !$scope.bTreeDataSet) ? treeData : null;
-			}
 
 			// $scope.keydown = function(e) {
 			// 	console.log('e', e);
