@@ -1,0 +1,11 @@
+<div class="node">
+	<div class="node__dot" ng-click="deleteMe()" ng-show="val.label">&bull;</div>
+	<div class="node__label">{{val.label}}</div>
+	<button ng-click="deleteMe()" ng-show="val.text">delete</button>
+	<div class="node__childrens" ng-if="val.childrens">
+		<div ng-repeat="item in val.childrens">
+			<my-list val="item" parent-data="val.childrens"></my-list>
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,16 @@
+.node {
+	padding-left: 1em;
+}
+
+.node__dot {
+	width: 1em;
+	height: 1em;
+	float: left;
+	background-color: yellow;
+	text-align: center;
+}
+.node__label {
+	overflow: hidden;
+	background-color: lightgray;
+	outline: none;
+}

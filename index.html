@@ -1,30 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="HelloApp">
+<html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
 	<title>lala</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<script src="/bower_components/angular/angular.js"></script>
-	<div ng-controller="HelloCtrl">
-		<h1 ng-bind="list.user">{{list.user}}</h1>
-		 <input type="text" ng-model="text">
-		 <button ng-click="handler()">go</button>
-		 <hr>
-		 <table>
-		 	<thead>
-			 	<tr>
-			 		<td>name</td><td>yepno</td>
-			 	</tr>
-		 	</thead>
-		 	<tbody>
-			 	<tr ng-repeat="course in list.courses">
-			 		<td>{{course.name}}</td>
-			 		<td ng-click="course.pass = !course.pass">{{course.pass ? 'yes' : 'no'}}</td>
-			 	</tr>
-		 	</tbody>
-		 </table>
+	<div ng-controller="appCtrl">
+	    <button class="btn btn-primary" ng-click="toggleData()">{{btnText()}}</button><br>
+	  		<tree val="treeData"></tree>
 	</div>
-	<script src="/js/script.js"></script>
+
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-contenteditable/angular-contenteditable.js"></script>
+	<script src="/bower_components/lodash/lodash.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers/main.controller.js"></script>
+	<script src="js/my.factory.js"></script>
 </body>
 </html>

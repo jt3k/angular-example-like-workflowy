@@ -1,0 +1,17 @@
+{
+  "name": "angular-example-like-workflowy",
+  "version": "0.0.0",
+  "description": "Example project with angular",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "A. Gurtovoy",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.10.0"
+  },
+  "scripts": {
+  	//ms-windows will suck
+    "start": "./node_modules/browser-sync/bin/browser-sync.js start --server --files='**/*'"
+  }
+}
